@@ -124,7 +124,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/AnonymousBoy123/anonymous_structx" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -135,7 +135,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2407.12522" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -177,7 +177,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          Conducting reasoning tasks with large language models (LLMs) on structured and redundant data poses significant challenges, primarily due to the complexity introduced by the structured markdown tokens and the presence of extraneous contextual information. These elements can overburden and disrupt the generation process of LLMs, complicating the extraction of relevant insights and the production of coherent outputs. To address this, we propose \method, a novel framework that operates through five key phases: "read-model-fill-reflect-reason'' efficiently enabling LLMs to utilize structured data. It begins by encoding structured data into a topological space using graph embeddings, followed by filling in missing entity information with knowledge retrieval modules, and filtering out irrelevant tokens via a self-supervised module. The final phase involves constructing a topological network with selected tokens to further reduce the total token length for more effective LLM inference. Additionally, StructX includes an Auxiliary Module trained to generate prompts, aiding LLMs in analyzing structured data. Extensive experiments on open-source benchmarks, including the knowledge graph question-answer task and the long document reading comprehension task, show that StructX notably improves LLM reasoning in complex structured input context. Finally, we deployed StructX in a real-world financial report analysis task, where it exhibits enhanced reasoning capabilities when applied to authentic scenario.
           </p>
         </div>
       </div>
@@ -307,7 +307,23 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>
+        @inproceedings{tan2025struct,
+  author = {Tan, Xiaoyu and Wang, Haoyu and Qiu, Xihe and Cheng, Leijun and Cheng, Yuan and Chu, Wei and Xu, Yinghui and Qi, Yuan},
+  title = {Struct-{X}: {Enhancing} the {Reasoning} {Capabilities} of {Large} {Language} {Models} in {Structured} {Data} {Scenarios}},
+  booktitle = {Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  series = {KDD '25},
+  year = {2025},
+  month = aug,
+  location = {Toronto, ON, Canada},
+  pages = {15},
+  numpages = {15},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3690624.3709381},
+  volume = {1}
+}
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
