@@ -47,236 +47,232 @@
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-<!--             <h1 class="title is-1 publication-title">StructX: Enhancing the Reasoning Capabilities of Large Language Models in Structured Data Scenarios</h1> -->
 <style>
+/* Modern color palette */
+:root {
+  --primary-gradient: linear-gradient(45deg, #3498db, #2ecc71);
+  --button-hover: linear-gradient(45deg, #2980b9, #27ae60);
+  --text-primary: #2c3e50;
+  --text-secondary: #555;
+  --background: #ffffff;
+}
+
+.hero {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+}
+
 .paper-title-container {
   margin: 2rem auto;
   text-align: center;
   max-width: 900px;
+  animation: fadeIn 1s ease-in;
 }
 
 .publication-title {
   font-size: 2.5rem;
   line-height: 1.3;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--text-primary);
   font-family: 'Arial', sans-serif;
+  margin-bottom: 2rem;
 }
 
 .gradient-text {
-  background: linear-gradient(45deg, #3498db, #2ecc71);
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 800;
   padding: 0 0.2rem;
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .publication-title {
-    font-size: 2rem;
-  }
+.gradient-text:hover {
+  transform: scale(1.05);
 }
-</style>
 
-<div class="paper-title-container">
-  <h1 class="publication-title">
-    <span class="gradient-text">StructX</span>: Enhancing the Reasoning Capabilities of Large Language Models in Structured Data Scenarios
-  </h1>
-</div>
-
-            
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-            <style>
+/* Authors section */
 .paper-container {
   max-width: 800px;
   margin: 2rem auto;
-  font-family: 'Arial', sans-serif;
+  padding: 0 1rem;
 }
 
 .authors-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem 0;
+  gap: 0.7rem;
+  margin: 1.5rem 0;
   line-height: 1.6;
 }
 
-.author-block {
-  display: inline-block;
-}
-
 .author-block a {
-  color: #2c3e50;
+  color: var(--text-primary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
 
 .author-block a:hover {
-  color: #3498db;
-  text-decoration: underline;
-}
-
-.affiliation-number {
-  font-size: 0.8em;
-  vertical-align: super;
+  background: var(--primary-gradient);
+  color: white;
+  transform: translateY(-2px);
 }
 
 .conference-info {
   text-align: center;
-  color: #666;
-  font-size: 1.1em;
-  margin: 1rem 0;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
   font-weight: 500;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .affiliations {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
-  margin: 1.5rem 0;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .affiliation {
   font-style: italic;
-  color: #555;
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: rgba(52, 152, 219, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.affiliation:hover {
+  transform: translateX(10px);
 }
 
 .equal-contribution {
   text-align: center;
-  color: #666;
-  font-size: 0.9em;
-  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Publication links */
+.publication-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.link-block .button {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link-block .button:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .publication-title {
+    font-size: 2rem;
+  }
+  
+  .publication-links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>
 
-<div class="paper-container">
-  <div class="authors-list">
-    <span class="author-block"><a href="Tan" target="_blank">Xiaoyu Tan</a><sup>*,2</sup>,</span>
-    <span class="author-block"><a href="Wang" target="_blank">Haoyu Wang</a><sup>*,1</sup>,</span>
-    <span class="author-block"><a href="Qiu" target="_blank">Xihe Qiu</a><sup>*,1</sup>,</span>
-    <span class="author-block"><a href="Cheng" target="_blank">Leijun Cheng</a><sup>1</sup>,</span>
-    <span class="author-block"><a href="Cheng" target="_blank">Yuan Cheng</a><sup>3</sup>,</span>
-    <span class="author-block"><a href="Chu" target="_blank">Wei Chu</a><sup>2</sup>,</span>
-    <span class="author-block"><a href="Xu" target="_blank">Yinghui Xu</a><sup>3</sup>,</span>
-    <span class="author-block"><a href="Qi" target="_blank">Yuan Qi</a><sup>3</sup></span>
-  </div>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="paper-title-container">
+        <h1 class="publication-title">
+          <span class="gradient-text">StructX</span>: Enhancing the Reasoning Capabilities of Large Language Models in Structured Data Scenarios
+        </h1>
+      </div>
 
-  <div class="conference-info">ACM KDD 2025</div>
+      <div class="paper-container">
+        <div class="authors-list">
+          <span class="author-block"><a href="Tan">Xiaoyu Tan</a><sup>*,2</sup>,</span>
+          <span class="author-block"><a href="Wang">Haoyu Wang</a><sup>*,1</sup>,</span>
+          <span class="author-block"><a href="Qiu">Xihe Qiu</a><sup>*,1</sup>,</span>
+          <span class="author-block"><a href="Cheng">Leijun Cheng</a><sup>1</sup>,</span>
+          <span class="author-block"><a href="Cheng">Yuan Cheng</a><sup>3</sup>,</span>
+          <span class="author-block"><a href="Chu">Wei Chu</a><sup>2</sup>,</span>
+          <span class="author-block"><a href="Xu">Yinghui Xu</a><sup>3</sup>,</span>
+          <span class="author-block"><a href="Qi">Yuan Qi</a><sup>3</sup></span>
+        </div>
 
-  <div class="affiliations">
-    <span class="affiliation"><sup>1</sup>Shanghai University of Engineering Science</span>
-    <span class="affiliation"><sup>2</sup>INF Technology (Shanghai) Co., Ltd.</span>
-    <span class="affiliation"><sup>3</sup>Fudan University</span>
-  </div>
+        <div class="conference-info">ACM KDD 2025</div>
 
-  <div class="equal-contribution">
-    <small><sup>*</sup>Indicates Equal Contribution</small>
-  </div>
-</div>
+        <div class="affiliations">
+          <span class="affiliation"><sup>1</sup>Shanghai University of Engineering Science</span>
+          <span class="affiliation"><sup>2</sup>INF Technology (Shanghai) Co., Ltd.</span>
+          <span class="affiliation"><sup>3</sup>Fudan University</span>
+        </div>
 
+        <div class="equal-contribution">
+          <small><sup>*</sup>Indicates Equal Contribution</small>
+        </div>
 
-              
-              
-<!--               <span class="author-block">
-                <a href="Tan" target="_blank">Xiaoyu Tan</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="Wang" target="_blank">Haoyu Wang</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="Qiu" target="_blank">Xihe Qiu</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="Cheng" target="_blank">Leijun Cheng</a><sup></sup>,</span>
-                <span class="author-block">
-                  <a href="Cheng" target="_blank">Yuan Cheng</a><sup></sup>,</span>
-                <span class="author-block">
-                  <a href="Chu" target="_blank">Wei Chu</a><sup></sup>,</span>
-                <span class="author-block">
-                  <a href="Xu" target="_blank">Yinghui Xu</a><sup></sup>,</span>
-                  <span class="author-block">
-                    <a href="Qi" target="_blank">Yuan Qi</a>
-                  </span>
-                  </div>
-
-    <div class="conference-info">ACM KDD 2025</div>
-             </span>
-            
-<div class="publication-authors">
-  <span class="author-block">
-    Shanghai University of Engineering Science
-  </span>
-  
-  <span class="author-block">
-    INF Technology (Shanghai) Co., Ltd.
-  </span>
-  
-  <span class="author-block">
-    Fudan University
-  </span>
-  
-  <span class="eql-cntrb">
-    <small><sup>*</sup>Indicates Equal Contribution</small>
-  </span>
-</div> -->
-
-
-
-            
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/AnonymousBoy123/anonymous_structx" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2407.12522" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
+        <div class="publication-links">
+          <span class="link-block">
+            <a href="https://arxiv.org/pdf/" target="_blank" class="button">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper</span>
+            </a>
+          </span>
+          
+          <span class="link-block">
+            <a href="static/pdfs/supplementary_material.pdf" target="_blank" class="button">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Supplementary</span>
+            </a>
+          </span>
+          
+          <span class="link-block">
+            <a href="https://github.com/AnonymousBoy123/anonymous_structx" target="_blank" class="button">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code</span>
+            </a>
+          </span>
+          
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2407.12522" target="_blank" class="button">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </span>
         </div>
       </div>
     </div>
