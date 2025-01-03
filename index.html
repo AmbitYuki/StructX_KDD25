@@ -74,13 +74,56 @@
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Shanghai University of Engineering Science<br>Conferance name and year</span>
-                    <span class="author-block">INF Technology (Shanghai) Co., Ltd.</span>
-                    <span class="author-block">Fudan University<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            
+<style>
+.publication-authors {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
 
+.author-block {
+  display: block;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.conference-info {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+.eql-cntrb {
+  margin-top: 1rem;
+  color: #666;
+}
+</style>
+
+<div class="publication-authors">
+  <span class="author-block">
+    Shanghai University of Engineering Science
+    <div class="conference-info">Conference name and year</div>
+  </span>
+  
+  <span class="author-block">
+    INF Technology (Shanghai) Co., Ltd.
+  </span>
+  
+  <span class="author-block">
+    Fudan University
+    <div class="conference-info">Conference name and year</div>
+  </span>
+  
+  <span class="eql-cntrb">
+    <small><sup>*</sup>Indicates Equal Contribution</small>
+  </span>
+</div>
+
+
+
+            
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
