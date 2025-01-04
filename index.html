@@ -293,20 +293,62 @@
 
   
 <!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-          Conducting reasoning tasks with large language models (LLMs) on structured and redundant data poses significant challenges, primarily due to the complexity introduced by the structured markdown tokens and the presence of extraneous contextual information. These elements can overburden and disrupt the generation process of LLMs, complicating the extraction of relevant insights and the production of coherent outputs. To address this, we propose \method, a novel framework that operates through five key phases: "read-model-fill-reflect-reason'' efficiently enabling LLMs to utilize structured data. It begins by encoding structured data into a topological space using graph embeddings, followed by filling in missing entity information with knowledge retrieval modules, and filtering out irrelevant tokens via a self-supervised module. The final phase involves constructing a topological network with selected tokens to further reduce the total token length for more effective LLM inference. Additionally, StructX includes an Auxiliary Module trained to generate prompts, aiding LLMs in analyzing structured data. Extensive experiments on open-source benchmarks, including the knowledge graph question-answer task and the long document reading comprehension task, show that StructX notably improves LLM reasoning in complex structured input context. Finally, we deployed StructX in a real-world financial report analysis task, where it exhibits enhanced reasoning capabilities when applied to authentic scenario.
-          </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .abstract-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .abstract-title {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .abstract-content {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            text-align: justify;
+            margin: 0;
+            hyphens: auto;
+        }
+
+        .abstract-content p {
+            margin-bottom: 0;
+            text-indent: 2em;
+        }
+
+        @media (max-width: 768px) {
+            .abstract-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="abstract-container">
+        <h2 class="abstract-title">Abstract</h2>
+        <div class="abstract-content">
+            <p>
+            Conducting reasoning tasks with large language models (LLMs) on structured and redundant data poses significant challenges, primarily due to the complexity introduced by the structured markdown tokens and the presence of extraneous contextual information. These elements can overburden and disrupt the generation process of LLMs, complicating the extraction of relevant insights and the production of coherent outputs. To address this, we propose \method, a novel framework that operates through five key phases: "read-model-fill-reflect-reason'' efficiently enabling LLMs to utilize structured data. It begins by encoding structured data into a topological space using graph embeddings, followed by filling in missing entity information with knowledge retrieval modules, and filtering out irrelevant tokens via a self-supervised module. The final phase involves constructing a topological network with selected tokens to further reduce the total token length for more effective LLM inference. Additionally, StructX includes an Auxiliary Module trained to generate prompts, aiding LLMs in analyzing structured data. Extensive experiments on open-source benchmarks, including the knowledge graph question-answer task and the long document reading comprehension task, show that StructX notably improves LLM reasoning in complex structured input context. Finally, we deployed StructX in a real-world financial report analysis task, where it exhibits enhanced reasoning capabilities when applied to authentic scenario.
+            </p>
         </div>
-      </div>
     </div>
-  </div>
-</section>
+</body>
+</html>
 <!-- End paper abstract -->
 
 
